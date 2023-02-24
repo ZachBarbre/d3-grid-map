@@ -11,10 +11,6 @@ const filteredData = data[0].TrendsMapData.filter((val) => {
     val.CancerSiteID === 1 && val.DataTypeID === 1 && val.GeoLocationID !== 1
   );
 });
-console.log(
-  "🚀 ~ file: index.js:14 ~ filteredData ~ filteredData:",
-  filteredData
-);
 
 const stateToId = {
   "United States": 1,
@@ -136,10 +132,6 @@ const stateGridWithData = stateGrid.map((state) => ({
   ...state,
   data: getDataByState(state.name),
 }));
-console.log(
-  "🚀 ~ file: index.js:139 ~ stateGridWithData ~ stateGridWithData:",
-  stateGridWithData
-);
 
 const width = 800;
 const height = width * 0.8;
